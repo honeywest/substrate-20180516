@@ -1,0 +1,66 @@
+name: polkadot
+author: "Parity Team <admin@parity.io>"
+about: Polkadot Node Rust Implementation
+args:
+  - log:
+      short: l
+      long: log
+      value_name: LOG_PATTERN
+      help: Sets a custom logging filter
+      takes_value: true
+  - base-path:
+      long: base-path
+      short: d
+      value_name: PATH
+      help: Specify custom base path
+      takes_value: true
+  - keystore-path:
+      long: keystore-path
+      value_name: PATH
+      help: Specify custom keystore path
+      takes_value: true
+  - key:
+      long: key
+      value_name: STRING
+      help: Specify additional key seed
+      takes_value: true
+  - node-key:
+      long: node-key
+      value_name: KEY
+      help: Specify node secret key (64-character hex string).
+      takes_value: true
+  - collator:
+      long: collator
+      help: Enable collator mode
+      takes_value: false
+  - validator:
+      long: validator
+      help: Enable validator mode
+      takes_value: false
+  - port:
+      long: port
+      value_name: PORT
+      help: Specify p2p protocol TCP port
+      takes_value: true
+  - rpc-port:
+      long: rpc-port
+      value_name: PORT
+      help: Specify HTTP RPC server TCP port
+      takes_value: true
+  - ws-port:
+      long: ws-port
+      value_name: PORT
+      help: Specify WebSockets RPC server TCP port
+      takes_value: true
+  - bootnodes:
+      long: bootnodes
+      value_name: URL
+      help: Specify a list of bootnodes
+      takes_value: true
+      multiple: true
+  - chain:
+      long: chain
+      value_name: CHAIN_SPEC
+      help: Specify the chain specification (one of dev, local or poc-1)
+      takes_value: true
+subcommands:
